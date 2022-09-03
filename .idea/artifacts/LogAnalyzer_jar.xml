@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="LogAnalyzer:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/LogAnalyzer_jar</output-path>
+    <root id="archive" name="LogAnalyzer.jar">
+      <element id="module-output" name="LogAnalyzer" />
+      <element id="extracted-dir" path="C:/Program Files/Java/gson-2.8.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/commons4-4.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/javafx-sdk-11.0.2/lib/javafx-swt.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/javafx-sdk-11.0.2/lib/javafx.web.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/javafx-sdk-11.0.2/lib/javafx.base.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/javafx-sdk-11.0.2/lib/javafx.fxml.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/javafx-sdk-11.0.2/lib/javafx.media.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/javafx-sdk-11.0.2/lib/javafx.swing.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/javafx-sdk-11.0.2/lib/javafx.controls.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/javafx-sdk-11.0.2/lib/javafx.graphics.jar" path-in-jar="/" />
+      <element id="dir-copy" path="C:/Program Files/Java/jdk-14.0.1/bin" />
+      <element id="dir-copy" path="C:/Program Files/Java/javafx-sdk-11.0.2/bin" />
+    </root>
+  </artifact>
+</component>
