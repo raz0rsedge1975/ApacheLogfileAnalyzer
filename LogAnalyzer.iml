@@ -7,9 +7,9 @@
     </content>
     <orderEntry type="jdk" jdkName="14" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="commons-collections4-4.4" level="project" />
     <orderEntry type="library" name="JFX" level="application" />
     <orderEntry type="library" name="json-simple-1.1.1" level="application" />
     <orderEntry type="library" name="gson-2.8.6" level="application" />
+    <orderEntry type="library" name="commons4-4.4" level="application" />
   </component>
 </module>
