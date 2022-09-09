@@ -63,8 +63,9 @@ public class ButtonHandler implements EventHandler<ActionEvent> { //Handler für
         File selectedFile = fileChooser.showOpenDialog(window);
         if (selectedFile != null) {
             String logFilename = selectedFile.getName();
-            System.out.println(logFilename);
-            sbTmp = DateiVerbindung.liesLog(logFilename);
+            String logFilepath = selectedFile.getAbsolutePath();
+            System.out.println("Logfile: " + logFilepath);
+            sbTmp = DateiVerbindung.liesLog(logFilepath);
             System.out.println(sbTmp.toString());
                 httpText.setText(httpanalyzer.analyze(sbTmp.toString()) + '\n');
                 httpText.setFill(Color.CORNFLOWERBLUE);

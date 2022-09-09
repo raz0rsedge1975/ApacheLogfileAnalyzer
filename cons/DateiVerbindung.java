@@ -8,20 +8,21 @@ import java.nio.charset.StandardCharsets;
 public class DateiVerbindung {
 
     private static final File JARFILE = new File(StartAnalyzerFX.class.getProtectionDomain().getCodeSource().getLocation().getPath());
+    private static final String JAR = JARFILE.toString();
     private DateiVerbindung(){}
 
     public static File liesFileVomJARpfad(String filename) throws IOException {
-        System.out.println("Filepath: " + JARFILE);
+        //System.out.println("Filepath: " + JAR);
         //Path inside jar-file -> Class_jar/Class_jar/..
         //one folder up is the corresponding Class_jar folder, so you can put all ressources in a subfolder (e.g. res/)
         //used: out\artifacts\Class_jar\res here for the pics and csv files inside res folder
-        //return new File(JARFILE.getParent() + "\\res\\" + filename);;
+        //return new File(JARFILE.getParent() + "\\res\\" + filename);
         return new File(JARFILE + "\\res\\" + filename);
     }
 
     private static StringBuilder liesFileToStringbuilder(String filename) throws IOException {
         StringBuilder sb = new StringBuilder();
-        File ressourceFile = DateiVerbindung.liesFileVomJARpfad(filename);
+        File ressourceFile = new File(filename);
 
         try (BufferedReader br = new BufferedReader(new FileReader(ressourceFile, StandardCharsets.UTF_8))) {
             String line;
@@ -29,7 +30,8 @@ public class DateiVerbindung {
                 sb.append(line).append(System.lineSeparator());
             }
         } catch (IOException e) {
-            e.getLocalizedMessage();
+            String lError = e.getLocalizedMessage();
+            System.out.println(lError);
         }
         return sb;
     }

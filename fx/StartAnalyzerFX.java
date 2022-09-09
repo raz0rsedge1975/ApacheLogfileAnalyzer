@@ -41,7 +41,7 @@ public class StartAnalyzerFX extends Application {
     }
 
     @Override
-    public void start(Stage window) throws IOException {
+    public void start(Stage window) {
         window.setTitle("HTTP(S) LogFile Analyzer");
         final FlowPane root = new FlowPane(Orientation.HORIZONTAL);
         try {
@@ -85,7 +85,7 @@ public class StartAnalyzerFX extends Application {
                     }
         });
         button.setOnAction(new ButtonHandler(textFlow, window) {
-            ExecutorService executorService = Executors.newSingleThreadExecutor();
+            final ExecutorService executorService = Executors.newSingleThreadExecutor();
         });
 
         Text spacer1 = new Text("\n");

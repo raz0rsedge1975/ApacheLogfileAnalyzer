@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 public class IPLocator {
 
 
-    /* FSBwIT-Proxy-Kram
+    /* Proxy-Kram
     private static final String PROXY_USERNAME = "*******";
     private static final String PROXY_PASSWORD = "*******";*/
 
@@ -111,7 +111,7 @@ public class IPLocator {
      * Macht die eigentliche Lokalisierungsarbeit.
      *
      * @param ips die IP oder die IPs
-     * @return ein JSON-formatierter String mit der Antwort ??????????????????????????????
+     * @return ein JSON-formatierter String mit der Antwort ?
      * @see IPLocator#list2String(List)
      */
     private String doLocate(String ips) {
@@ -149,6 +149,7 @@ public class IPLocator {
             return ips.get(0);
         }
         //hier stimmt was nicht
-        return ips.stream().collect(Collectors.joining(","));
+        //return ips.stream().collect(Collectors.joining(","));
+        return String.join(",", ips);
     }
 }
