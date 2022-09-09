@@ -103,6 +103,7 @@ public class StartAnalyzerFX extends Application {
         root.setPadding(Insets.EMPTY);
         window.setScene(new Scene(root, 800, 600));
         window.sizeToScene();
+        window.setResizable(true);
         window.isAlwaysOnTop();
         window.show();
     }
