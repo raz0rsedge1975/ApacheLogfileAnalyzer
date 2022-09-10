@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.net.Authenticator;
 import java.net.PasswordAuthentication;
 import java.net.URL;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -148,6 +149,7 @@ public class IPLocator {
         if (ips.size() == 1) {
             return ips.get(0);
         }
+        ips.removeAll(Collections.singleton("127.0.0.1")); //remove local interface IP
         //hier stimmt was nicht
         //return ips.stream().collect(Collectors.joining(","));
         return String.join(",", ips);
